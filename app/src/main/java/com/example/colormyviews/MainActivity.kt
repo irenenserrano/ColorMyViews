@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun makeColored(view: View) {
+        val boxes = listOf(binding.boxOneText, binding.boxTwoText, binding.boxThreeText, binding.boxFourText,binding.boxFiveText)
+
         when (view.id) {
             // Boxes using Color class colors for background
             R.id.box_one_text -> view.setBackgroundColor(Color.DKGRAY)
@@ -45,9 +47,9 @@ class MainActivity : AppCompatActivity() {
             R.id.box_four_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
 
-            R.id.red_button -> binding.boxThreeText.setBackgroundResource(R.color.my_red)
-            R.id.yellow_button -> binding.boxFourText.setBackgroundResource(R.color.my_yellow)
-            R.id.green_button -> binding.boxFiveText.setBackgroundResource(R.color.my_green)
+            R.id.red_button -> boxes.random().setBackgroundResource(R.color.my_red)
+            R.id.yellow_button -> boxes.random().setBackgroundResource(R.color.my_yellow)
+            R.id.green_button -> boxes.random().setBackgroundResource(R.color.my_green)
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
