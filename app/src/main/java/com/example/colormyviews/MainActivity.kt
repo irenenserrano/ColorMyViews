@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
                 binding.boxFiveText,
                 binding.redButton,
                 binding.yellowButton,
-                binding.greenButton)
+                binding.greenButton
+            )
 
         for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
@@ -35,7 +36,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun makeColored(view: View) {
-        val boxes = listOf(binding.boxOneText, binding.boxTwoText, binding.boxThreeText, binding.boxFourText,binding.boxFiveText)
+        val boxes = listOf(
+            binding.boxOneText,
+            binding.boxTwoText,
+            binding.boxThreeText,
+            binding.boxFourText,
+            binding.boxFiveText
+        )
 
         when (view.id) {
             // Boxes using Color class colors for background
